@@ -12,6 +12,7 @@ body {
     justify-content: flex-start; /* Align items to the start of the flex container */
     height: 100vh;
     padding: 0 20px;
+    box-sizing: border-box; /* Include padding in the element's total width and height */
 }
 
 .image-container {
@@ -33,7 +34,7 @@ body {
 
 .intro-container h1 {
     font-size: 3em;
-    margin-bottom: 20px;
+    margin: 0; /* Remove margin for better alignment */
     color: #333;
 }
 
@@ -61,6 +62,7 @@ body {
     width: 80%; /* Reduce button width */
     max-width: 250px; /* Limit the width of the buttons */
     margin-bottom: 10px; /* Space between buttons */
+    box-sizing: border-box; /* Include padding in the element's total width */
 }
 
 .btn:last-child {
@@ -71,7 +73,23 @@ body {
     background-color: #555;
 }
 
-@media (max-width: 768px) {
+/* Responsive design for different screen sizes */
+
+@media (max-width: 1200px) {
+    .intro-container h1 {
+        font-size: 2.5em;
+    }
+
+    .intro-container p {
+        font-size: 1.1em;
+    }
+
+    .btn {
+        width: 90%; /* Adjust button width */
+    }
+}
+
+@media (max-width: 992px) {
     .main-section {
         flex-direction: column;
         text-align: center;
@@ -82,12 +100,42 @@ body {
     }
 
     .button-container {
-        flex-direction: column;
+        align-items: center;
     }
 
     .btn {
-        width: 100%;
+        width: 80%; /* Adjust button width */
         margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .intro-container h1 {
+        font-size: 2em;
+    }
+
+    .intro-container p {
+        font-size: 1em;
+    }
+
+    .btn {
+        width: 100%; /* Full width buttons */
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .intro-container h1 {
+        font-size: 1.5em;
+    }
+
+    .intro-container p {
+        font-size: 0.9em;
+    }
+
+    .btn {
+        padding: 8px 16px; /* Adjust padding for smaller screens */
+        font-size: 0.9em;
     }
 }
 
@@ -133,7 +181,7 @@ body {
     animation: 
         fadeIn 0s 2s forwards, /* Ensure opacity changes after delay */
         typewriter 3s steps(30, end) 2s 1 normal both, /* Typewriter for "I am Janhavi Tayde" */
-        blinkTextCursor 500ms steps(30, end) 3.5s 1 normal forwards; /* Cursor blink effect */
+        blinkTextCursor 500ms steps(30, end) 5s 1 normal forwards; /* Cursor blink effect */
     font-family: 'Lora', serif; /* Match font-family if needed */
     white-space: nowrap; /* Ensure text doesn't wrap */
 }
