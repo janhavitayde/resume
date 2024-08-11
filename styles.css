@@ -4,15 +4,16 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    box-sizing: border-box; /* Ensure padding and borders are included in element's total width and height */
 }
 
 .main-section {
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Align items to the start of the flex container */
+    justify-content: center; /* Center align items for better fit on smaller screens */
     height: 100vh;
-    padding: 0 20px;
-    box-sizing: border-box; /* Include padding in the element's total width and height */
+    padding: 0 10px; /* Reduced padding to prevent content from being cut off */
+    box-sizing: border-box; /* Ensure padding is included in the height */
 }
 
 .image-container {
@@ -22,24 +23,24 @@ body {
 
 .profile-pic {
     width: 90%;
-    max-width: 400px;
+    max-width: 350px; /* Reduced max-width for smaller screens */
     border-radius: 10px;
 }
 
 .intro-container {
     flex: 1;
-    padding-left: 20px;
+    padding-left: 10px; /* Reduced padding to fit better on smaller screens */
     text-align: left; /* Align text to the left */
 }
 
 .intro-container h1 {
-    font-size: 3em;
-    margin: 0; /* Remove margin for better alignment */
+    font-size: 2.5em; /* Adjusted font size for better fit on smaller screens */
+    margin: 0; /* Reset margin for better spacing */
     color: #333;
 }
 
 .intro-container p {
-    font-size: 1.2em;
+    font-size: 1.5em; /* Increased font size for better readability */
     margin-bottom: 20px;
     color: #555;
 }
@@ -52,14 +53,14 @@ body {
 }
 
 .btn {
-    padding: 10px 20px;
+    padding: 10px 20px; /* Consistent padding */
     background-color: #333;
     color: #fff;
     text-decoration: none;
     border-radius: 30px;
-    font-size: 1em;
+    font-size: 1em; /* Consistent font size */
     text-align: center;
-    width: 80%; /* Reduce button width */
+    width: 100%; /* Full width buttons for better fit */
     max-width: 250px; /* Limit the width of the buttons */
     margin-bottom: 10px; /* Space between buttons */
     box-sizing: border-box; /* Include padding in the element's total width */
@@ -77,11 +78,11 @@ body {
 
 @media (max-width: 1200px) {
     .intro-container h1 {
-        font-size: 2.5em;
+        font-size: 2.2em; /* Slightly smaller for large tablets and small desktops */
     }
 
     .intro-container p {
-        font-size: 1.1em;
+        font-size: 1.3em; /* Adjusted font size */
     }
 
     .btn {
@@ -111,11 +112,11 @@ body {
 
 @media (max-width: 768px) {
     .intro-container h1 {
-        font-size: 2em;
+        font-size: 2em; /* Adjust font size for smaller tablets and large mobile devices */
     }
 
     .intro-container p {
-        font-size: 1em;
+        font-size: 1.2em; /* Adjusted font size */
     }
 
     .btn {
@@ -126,16 +127,16 @@ body {
 
 @media (max-width: 576px) {
     .intro-container h1 {
-        font-size: 1.5em;
+        font-size: 1.5em; /* Further reduced font size for very small screens */
     }
 
     .intro-container p {
-        font-size: 0.9em;
+        font-size: 1em; /* Adjusted font size */
     }
 
     .btn {
         padding: 8px 16px; /* Adjust padding for smaller screens */
-        font-size: 0.9em;
+        font-size: 1em; /* Keep font size consistent */
     }
 }
 
@@ -184,11 +185,4 @@ body {
         blinkTextCursor 500ms steps(30, end) 5s 1 normal forwards; /* Cursor blink effect */
     font-family: 'Lora', serif; /* Match font-family if needed */
     white-space: nowrap; /* Ensure text doesn't wrap */
-}
-
-/* Ensure proper spacing and positioning */
-.intro-container h1 {
-    margin: 0; /* Reset margin */
-    font-size: 3em;
-    color: #333;
 }
